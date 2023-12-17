@@ -210,7 +210,7 @@ public class TypingGameWithFeedback {
             totalCharacters += (userWord.length() < printedWord.length()) ? 1 : 0;
         }
 
-        double accuracy = ((double) correctCharacters / totalCharacters) * 100;
+        double accuracy = ((double) totalCharacters - correctCharacters) * 100;
         double wpm = (totalCharacters / 5.0) / (INITIAL_TIME / 60.0);
 
         JOptionPane.showMessageDialog(null,
